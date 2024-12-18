@@ -1,387 +1,255 @@
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
+/* Importing the Lato Google font */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
+/* Colors used on page */
+/* Primary: #f4f4f4 */
+/* Secondary: #eb4442 */
+/* Accent1: #e6e6e6 */
+/* Accent2:#2d2b3e */
+
+/* Basic Styles */
 body {
-    background-color: rgb(101, 64, 118);
-    color: black;
-    font-family: "Fira Sans", sans-serif;
-    background-color: rgba(233, 235, 253, 0.41);
+  font-family: "Lato", sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+  margin: 0;
+  background-color: #b0752c;
 }
 
-nav {
-    width: 100%;
-    height: 80px;
-    display: flex;
-    justify-content: space-between;
-    padding: 20px 5%;
-    background-color: #a213db;
+.container {
+  width: 80%;
+  margin: auto;
 }
 
-nav .heading {
-    font-size: 30px;
-    font-weight: 700;
-    color: white;
+ul {
+  margin: 0;
+  /* Removes the bullet point before each list item */
+  list-style: none;
 }
 
-nav ul {
-    display: flex;
-    list-style: none;
+.btn-1 {
+  height: 38px;
+  background-color: #c88901;
+  border: 0;
+  padding: 0 30px;
+  color: #000000;
 }
 
-nav ul li {
-    padding: 8px 15px;
-    border-radius: 10px;
-    transition: 0.2s ease-in;
+.light {
+  background-color: #e6e6e6;
+  color: #2d2b3e;
 }
 
-nav ul li a {
-    color: black;
-    font-size: 20px;
-    font-weight: 500;
-    text-decoration: none;
-    color: white;
+.dark {
+  background-color: #2d2b3e;
+  color: #e6e6e6;
 }
 
-nav ul li:hover {
-    background-color: rgb(15, 199, 236);
+.light, .dark {
+  padding: 15px;
+  margin: 10px 0;
 }
 
-nav ul li a:hover {
-    color: white;
+/* Header */
+header {
+  background-color: #2d2b3e;
+  color: #e6e6e6;
+  border-bottom: 3px solid #094112;
+  padding: 20px 0;
 }
 
-nav .sideMenuButton {
-    font-size: 30px;
-    font-weight: bolder;
-    cursor: pointer;
-    display: none;
+header div:nth-of-type(1) {
+  display: flex;
+  justify-content: space-between;
 }
 
-/* responsive navbar css */
-@media screen and (max-width: 600px) {
-    nav .sideMenuButton {
-        display: flex;
-    }
-
-    nav .navbar {
-        display: none;
-    }
-
-    .sideNavigationBar {
-        display: block !important;
-    }
+header ul {
+  display: flex;
+  align-items: center;
+  /* Changing/Increasing the amount of vertical space that the ul takes up so the li elements can be centered vertically */
+  height: 100%;
 }
 
-.sideNavigationBar {
-    height: 100%;
-    position: fixed;
-    top: 0;
-    right: 0%;
-    background-color: green;
-    overflow-x: hidden;
-    transition: 0.3s ease-in;
-    padding-top: 60px;
-    display: none;
+header a {
+  color: #e6e6e6;
+  padding: 0 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 18px;
 }
 
-.sideNavigationBar a {
-    padding: 8px 8px 8px 40px;
-    display: block;
-    font-size: 25px;
-    font-weight: 500;
-    color: #d1d1d1;
-    transition: 0.3s;
-    text-decoration: none;
+#highlight, #current a {
+  color: #038c38;
+  font-weight: 700;
 }
 
-.sideNavigationBar a button {
-    padding: 10px 20px;
-    border-radius: 10px;
-    color: green;
-    font-size: 16px;
-    border-style: none;
-    font-weight: 700;
+/* Selects all a elements except for the "HOME" a tag */
+header a:not(#current a):hover {
+  color: #ffffff;
+  font-weight: 700;
 }
 
-.sideNavigationBar a:hover {
-    color: white;
+/* Showcase */
+#showcase {
+  background-image: url("Coffee-Shop.webp");
+  height: 400px;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  color: #fff;
 }
 
-.sideNavigationBar .closeButton {
-    position: absolute;
-    top: 10px;
-    right: 25px;
-    font-size: 20px;
-    margin-left: 50px;
+#showcase div {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
 }
 
-.line {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 2% 5%;
+#showcase h1 {
+  font-size: 55px;
 }
 
-.line .side1 {
-    padding-right: 50px;
+#showcase p {
+  font-size: 20px;
 }
 
-.side1 h1 {
-    font-size: 60px;
-    margin-bottom: 10px;
-    color: rgb(79, 0, 128);
+/* Newsletter */
+#newsletter {
+  background-color: #674e27;
+  padding: 15px;
+  color: #ffffff;
 }
 
-.side1 button {
-    width: 200px;
-    padding: 12px 20px;
-    border-radius: 20px;
-    border-style: none;
-    color: black;
-    font-size: 17px;
-    font-weight: 600;
+#newsletter div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#newsletter {
+    box-shadow: 2px 5px #000000;
+  }
+  
+
+#newsletter input {
+  padding: 4px;
+  height: 25px;
+  width: 250px;
 }
 
-a {
-    text-decoration: none;
-    color: black;
+/* Boxes */
+#boxes {
+  height: 400px;
 }
 
-/* Header content responsive */
-@media screen and (max-width: 980px) {
-    .side2 img {
-        width: 350px;
-    }
-
-    .side1 h1 {
-        font-size: 40px;
-    }
-
-    .side1 p {
-        font-size: 17px;
-    }
-
-    .line {
-        margin-top: 150px;
-    }
+#boxes .container {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: space-between;
 }
 
-@media screen and (max-width: 600px) {
-    .side1 h1 {
-        font-size: 35px;
-    }
-
-    .line {
-        flex-direction: column;
-    }
-
-    .line .side1 {
-        padding: 70px;
-    }
+.box {
+  width: 30%;
+  text-align: center;
+  padding: 10px;
 }
 
-/* section */
-
-section .topic a {
-    font-size: 25px;
-    font-weight: 500;
-    margin-bottom: 60px;
+i {
+  font-size: 225px;
 }
 
-.about .boxes {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+
+/* About */
+#about {
+  background-color: #2d2b3e;
+  padding: 20px;
+  color: #ffe59c;
 }
 
-.about .boxes .box {
-    margin: 40px 40px;
-    max-width: calc(100% / 3 - 50px);
-    text-align: center;
-    border-radius: 30px;
-    padding: 30px 10px;
-    box-shadow: 0 9px 15px rgba(66, 91, 232, 0.501);
-    cursor: default;
+#about .container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  column-gap: 50px;
 }
 
-/* Contact Page  */
-
-.contact {
-    padding: 20px;
+/* Services */
+#services .container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  column-gap: 50px;
 }
 
-.contact .content {
-    margin: 0 auto;
-    padding: 30px 0;
+#services ul {
+  /* Removes left padding */
+  padding: 0;
 }
 
-.content .title {
-    width: 80%;
-    text-align: center;
-    font-weight: bolder;
-    font-size: 40px;
+#services li {
+  border: 1px solid #000000;
+  padding: 20px;
+  margin-bottom: 5px;
+  background-color: #a16f2d;
 }
 
-.title {
-    margin-bottom: 30px;
-    margin-left: 80px;
+#services .sidebar {
+  margin-top: 10px;
 }
 
-.contactMenu {
-    display: flex;
-    justify-content: space-evenly;
-}
-
-.input2 {
-    margin-top: 10;
-}
-
-.label1 {
-    font-size: 18px;
-    margin-top: 8px;
-    margin-bottom: 8px;
-    font-weight: bolder;
-}
-
-.contactMenu .input1 input {
-    border-radius: 13px;
-    padding: 6px;
-}
-
-.input2 input {
-    border-color: rgb(63, 55, 55);
-    width: 400px;
-}
-
-.button {
-    margin-top: 12px;
-    margin-left: 5px;
-}
-
-.button button {
-    width: 162px;
-    height: 35px;
-    border-radius: 12px;
-    border-color: transparent;
-}
-
-.button button:hover {
-    background-color: #8cc099;
-}
-
-button {
-    width: 162px;
-    height: 35px;
-    border-radius: 12px;
-    border-color: transparent;
-}
-
-button:hover {
-    background-color: #320a8f;
-}
-
-.rightside1 {
-    display: flex;
-    flex-direction: column;
-    margin-left: 400px;
-    margin-top: 200;
-}
-
-.title1 {
-    font-size: 18px;
-    margin-top: 8px;
-    margin-bottom: 5px;
-    font-weight: bolder;
-}
-
-.content1 {
-    width: 450px;
-    margin-top: 2px;
-    color: rgb(124, 3, 106);
+#services input, #services textarea {
+  margin-bottom: 10px;
+  width: 90%;
+  padding: 5px;
 }
 
 /* Footer */
 footer {
-    background: var(--primary-color);
-    padding: 15px 0;
+  background-color: #2d2b3e;
+  color: #e6e6e6;
+  text-align: center;
+  padding: 20px;
+  margin-top: 20px; 
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  header .container,
+  #newsletter .container,
+  #boxes .container {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  header ul {
+    padding: 0;
+  }
+
+  #boxes {
+    height: auto;
+  }
+}
+
+@media (max-width: 375px) {
+  #showcase {
+    height: auto;
+  }
+
+  #newsletter {
     text-align: center;
-    font-family: "Poppins", sans-serif;
+  }
+
+  #newsletter button {
+    width: 260px;
+    margin-top: 10px;
+  }
+
+  .box {
+    width: 80%;
+  }
+
+  #about .container,
+  #services .container {
+    grid-template-columns: 100%;
+  }
 }
-
-footer .footer span {
-    font-size: 17px;
-    font-weight: 400;
-    color: var(--white-color);
-}
-
-footer .footer span a {
-    font-weight: 500;
-    color: var(--white-color);
-}
-
-footer .footer span a:hover {
-    text-decoration: underline;
-}
-
-@media screen and (max-width: 1060px) {
-    .contactMenu {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .rightside1 {
-        display: flex;
-        flex-direction: column;
-        margin-left: 0px;
-    }
-
-    .content1 {
-        width: 100%;
-        margin-top: 2px;
-        color: rgb(125, 109, 217);
-    }
-
-    .side2 img {
-        width: 95%;
-        height: 90%;
-    }
-}
-
-@media screen and (max-width: 600px) {
-    .side2 img {
-        width: 100%;
-    }
-
-    section .topic a {
-        font-size: 10px;
-    }
-
-    section .topic p {
-        font-size: 5px;
-    }
-
-    .about .boxes {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .about .boxes .box {
-        max-width: 70%;
-    }
-    .box {
-        /* Google Fonts provides this for us */
-        font-family: "Roboto", sans-serif;
-        font-weight: 700;
-        font-style: normal;
-      }
-      
-      .box {
-        font-family: "Press Start 2P", system-ui;
-        font-weight: 400;
-        font-style: normal;
-      }
-
